@@ -1,0 +1,76 @@
+
+#home{
+    margin-top: 15vh; 
+    text-align: center;  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #1B1464;
+    font-size: 2rem;  
+    background-image: url("https://www.citypng.com/public/uploads/small/11639594320pss4tbiransxz0lclgesdm9kr73odulxn16eo3n1remr761kz0vj2nda3llvan8besj5i9fp18ocdvfnf36c5b6wfz8b8itb81fp.png");
+    background-position: center;
+    background-size: cover;
+}
+#userid, #pwd {
+    padding: 10px; 
+    color: black;
+    border-color: #1B1464;
+}
+
+#admin{
+    margin-top: 20vh;
+    text-align: center; 
+    font-size: 2rem; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #c23616; 
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-abstract-mockup-scene-podium-for-product-presentation-3d-render-3d-illustration-image_402459.jpg");
+    background-size: cover;
+   
+}
+
+#adddata{
+    color: #1B1464;
+    margin-top: 5vh;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Add.svg/800px-Add.svg.png");
+    background-size: 2000px;
+    background-position: center;
+}
+#adm, #roll, #name, #eng, #maths, #scn{
+    padding: 10px; 
+    color: black;
+    border-color:black;
+}
+
+#showdata{
+    text-align: center;
+    background-color: #D6A2E8;
+}
+table, th, td{
+    margin-top: 20vh;
+    margin-left: 300px;
+    border:5px ridge;
+    font-size: 1.5rem;
+    color: black;
+}
+th{
+    background-color: #f9ca24;
+}
+
+button{
+    margin-top: 20px; 
+    margin-left: 50px; 
+    margin-right: 50px; 
+    margin-bottom: 20px;
+    font-size: 1.5rem; 
+    font-weight: bold;
+    background-color: #dcdde1;
+    color: black; 
+    border: solid black; 
+    border-radius: 10px; 
+    padding-top: 5px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-bottom: 5px; 
+    cursor: pointer;
+}
