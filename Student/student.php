@@ -30,16 +30,7 @@ class Student {
         echo $this->totalMarks . "<br>";
         echo $this->percentage . "<br>";
 
-        $host = '127.0.0.1:3308';
-        $user = 'root';
-        $password = '';
-        $database = 'student';
-        $conn = mysqli_connect($host, $user, $password, $database);
-        $conn = mysqli_connect($host, $user, $password, $database);
-        /*if(!$conn)
-            die("Connection Failed!".mysqli_connect_error());
-            else
-                echo "Database Connected Successfully!";*/
+        include "../dbconnect.php";
 
         $sql = "SELECT * FROM `Result`"; 
         $result = mysqli_query($conn, $sql);
@@ -58,16 +49,7 @@ class Student {
 
     public function push_data()
     {
-        $host = '127.0.0.1:3308';
-        $user = 'root';
-        $password = '';
-        $database = 'student';
-        $conn = mysqli_connect($host, $user, $password, $database);
-        $conn = mysqli_connect($host, $user, $password, $database);
-        /*if(!$conn)
-            die("Connection Failed!".mysqli_connect_error());
-            else
-                echo "Database Connected Successfully!";*/
+        include "../dbconnect.php";
 
         $sql = "INSERT INTO `result` (`AdmissionNo.`, `RollNo.`, `Name`, `English`, `Mathematics`, `Science`, `Total`, `Percentage`) 
         VALUES ('$this->admissionNumber', '$this->rollNumber', '$this->studentName', '$this->engMarks', '$this->mathsMarks', '$this->scienceMarks', '$this->totalMarks', '$this->percentage')";

@@ -2,12 +2,8 @@
 <html lang="en">
  
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="student_style.css">
     <title>Result</title>
- 
 </head>
  
 <body id="home">
@@ -19,21 +15,15 @@
         <label for="roll">Roll Number : </label>
         <input type="number" name="roll" placeholder="Enter Roll Number" id="roll">
         <br>
-        <button>Login</button>
+        <input type="submit" name="login" id="login" value="Login">
     </form>
     <?php
     if (isset($_POST['admission']) and isset($_POST['roll']) && strlen($_POST['admission']) && strlen($_POST['roll'])) {
         $adm = $_POST['admission'];
         $roll = $_POST['roll'];
-        $host = '127.0.0.1:3308';
-        $user = 'root';
-        $password = '';
-        $database = 'student';
-        $conn = mysqli_connect($host, $user, $password, $database);
-        /*if(!$conn)
-            die("Connection Failed!".mysqli_connect_error());
-            else
-                echo "Database Connected Successfully!" . "<br>";*/
+
+        include "../dbconnect.php";
+
         $sql = "SELECT* FROM `result` WHERE `AdmissionNo.` = $adm";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
@@ -67,7 +57,7 @@
         else {
             echo "<h3>" . "Error in credentials...Try Again!". "<br>";
         }
-        echo "<a href='../index.php'><button>Home</button></a>";
+        echo "<a href='../index.php'> <input type='submit' name=`home` id=`home` value='Home'> </a>";
 
     }
     ?>
