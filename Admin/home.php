@@ -9,7 +9,7 @@
     <h1>Welcome to Admin Login Page </h1>
     <form method="post" action="home.php">
         <label for="userid"> User ID : </label>
-        <input type="number" name="userid" id="userid" placeholder="Enter User ID"> <br> <br>
+        <input type="text" name="userid" id="userid" placeholder="Enter User ID"> <br> <br>
         <label for="pwd"> Password : </label>
         <input type="password" name="pwd" id="pwd" placeholder="Enter Password"> <br> <br>
         <br>
@@ -21,7 +21,7 @@ include "../dbconnect.php";
 if (isset($_POST['userid']) and isset($_POST['pwd']) && strlen($_POST['userid']) && strlen($_POST['pwd'])) {
         $adm = $_POST['userid'];
         $pass= $_POST['pwd'];
-        $sql = "SELECT* FROM `admin` WHERE UserID = $adm";
+        $sql = "SELECT* FROM `admin` WHERE UserID = '$adm'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $num = mysqli_num_rows($result);

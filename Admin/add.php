@@ -39,7 +39,7 @@
         {
             $stu = new Student($adm, $roll, $name, $eng, $maths, $scn);
             $stu->push_data();
-            echo "<br>" . "<a href='./admin.php'> <button> Home </button> </a>";
+            echo "<br>" . "<a href='./admin.php'> <input type='submit' name=`home` id=`home_btn` value='Home'> </a>";
         }
         else{
             echo "All Fields are Required!";
